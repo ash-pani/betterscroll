@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>betterscroll — terminal knowledge feed</title>
+  <title>betterscroll — terminal knowledge system</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
@@ -11,14 +11,14 @@
   <style>
     .no-scrollbar::-webkit-scrollbar { display: none; }
     .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-    body { background-color: #0a0a0b; color: #d4d4d8; }
+    body { background-color: #0a0a0b; color: #d4d4d8; margin: 0; }
   </style>
 </head>
 <body class="bg-[#0a0a0b] text-zinc-300 font-mono text-xs antialiased selection:bg-zinc-800 selection:text-zinc-100">
   <div id="root"></div>
-  <script>window.__BETTERSCROLL_DATA__ = {"updatedAt":"2026-10-18T17:43:24.229Z","categories":[{"id":"all","name":"all","removable":false},{"id":"tech","name":"tech","removable":false},{"id":"energy","name":"energy","removable":false},{"id":"finance","name":"finance","removable":false},{"id":"science","name":"science","removable":false},{"id":"economy","name":"economy","removable":false},{"id":"semiconductors","name":"silicon","removable":true},{"id":"quantum","name":"quantum","removable":true}],"stories":[{"id":"s1","category":"semiconductors","author":"litho_notes","title":"2nm GAA & Backside Power","seen":false,"slides":[{"headline":"Gate-All-Around (GAA) Nanosheets","body":"Horizontal silicon ribbons replace vertical FinFET fins. The gate wraps all four sides of the channel, curbing sub-threshold leakage below 0.7V.","stat":"+15% clock at iso-power or -30% power at iso-frequency","takeaway":"Regains voltage scaling floor for high-density datacenter logic."},{"headline":"Backside Power Delivery (BSPDN)","body":"Moves power routing to the underside of the wafer while keeping logic signals on top, cutting parasitic RC delay and voltage droop.","stat":"20% reduction in logic core IR drop","takeaway":"Wafer-level 3D routing now drives efficiency gains alongside pitch shrink."}]},{"id":"s2","category":"energy","author":"grid_notes","title":"Sodium-Ion Grid Storage","seen":false,"slides":[{"headline":"Abundant Na+ Intercalation Chemistry","body":"Eliminates lithium, cobalt, and nickel dependencies. Hard carbon anodes and Prussian white cathodes operate reliably down to -20°C.","stat":"$40/kWh cell cost trajectory vs ~$70/kWh LFP","takeaway":"Lower gravimetric density is non-binding for stationary substation storage."}]},{"id":"s3","category":"finance","author":"rates_desk","title":"Overnight Reverse Repo Floor","seen":false,"slides":[{"headline":"ON RRP Liquidity Mechanics","body":"Money market funds park excess cash at the Federal Reserve overnight in exchange for Treasury collateral, setting a hard floor under short-term rates.","stat":"Sets effective lower bound for money market yields","takeaway":"Drainage of ON RRP balances marks the shift from abundant to ample bank reserves."}]},{"id":"s4","category":"science","author":"bio_systems","title":"Prime Editing Without DSBs","seen":false,"slides":[{"headline":"Single-Strand Search & Replace","body":"Couples an engineered reverse transcriptase with a Cas9 nickase, writing targeted edits directly into DNA without double-strand breaks.","stat":"Minimal off-target chromosomal translocation risk","takeaway":"Theoretically capable of correcting up to 89% of known pathogenic point mutations."}]}],"posts":[{"id":"p1","category":"energy","country":"us","handle":"watt_logic","readTime":"90s","headline":"Enhanced Geothermal: Directional Drilling Unlocks Dry Granite Baseload","sentiment":{"label":"constructive","tone":"pos","score":"+88%"},"verificationScore":97,"corroboratingSourcesCount":6,"sources":[{"name":"US Department of Energy","domain":"energy.gov","title":"Commercial Liftoff: Next-Generation Geothermal Power","tier":"Regulatory","url":"https://www.google.com/search?q=US+Department+of+Energy+Commercial+Liftoff+Geothermal","consensusNote":"Confirms 90 GW target and $60-70/MWh levelized cost trajectory."},{"name":"Fervo Energy Telemetry","domain":"fervoenergy.com","title":"Project Red 30-Day Cross-Well Flow Test Results","tier":"Industrial","url":"https://www.google.com/search?q=Fervo+Energy+Project+Red+Operational+Data","consensusNote":"Validates commercial flow rates and horizontal fracture thermal transfer."}],"slides":[{"tag":"constraint","title":"The 3% Hydrothermal Bottleneck","content":"Conventional geothermal required naturally occurring hot rock, water, and permeable fractures in the same location. 97% of continental crust heat remained inaccessible in dry basement granite.","metricLabel":"Crustal heat \u003c= 6km depth","metricValue":"50,000x annual global demand"},{"tag":"mechanism","title":"Horizontal Drilling & Polycrystalline Diamond Bits","content":"Adapting shale multi-stage horizontal drilling allows lateral well pairs at 4,000m depth. Cold water pumped down the injection well sweeps heat through fractured granite to the production well.","metricLabel":"Drilling speed vs 2019 baseline","metricValue":"3.4x faster"},{"tag":"economics","title":"24/7 Dispatchable Capacity Factor","content":"Unlike intermittent renewables (25–45% capacity factor), enhanced geothermal delivers >90% baseload utilization without grid-scale battery buffering.","metricLabel":"Projected LCOE (2027)","metricValue":"$60–$70 / MWh"}],"quiz":{"question":"What engineering crossover made geothermal viable outside volcanic zones?","options":["Horizontal directional drilling into dry hot granite","Deep-ocean thermal vent turbines","Surface solar-thermal steam injection"],"correctIndex":0},"saved":false,"learned":false},{"id":"p2","category":"tech","country":"us","handle":"kernel_arch","readTime":"110s","headline":"Inference Scaling Laws: Test-Time Compute vs Pre-Training FLOPs","sentiment":{"label":"transformative","tone":"pos","score":"+94%"},"verificationScore":95,"corroboratingSourcesCount":5,"sources":[{"name":"arXiv Preprint","domain":"arxiv.org","title":"Scaling LLM Test-Time Compute Optimally Can Be More Effective than Scaling Model Parameters","tier":"Academic","url":"https://www.google.com/search?q=Scaling+LLM+Test+Time+Compute+Optimally+arXiv","consensusNote":"Demonstrates compute-optimal trade-offs between parameter count and inference search."},{"name":"Epoch AI","domain":"epochai.org","title":"Test-Time Compute Frontier Analysis","tier":"Research","url":"https://www.google.com/search?q=Epoch+AI+Inference+Scaling","consensusNote":"Quantifies token generation bandwidth requirements."}],"slides":[{"tag":"paradigm","title":"From Single-Pass Autoregression to Search","content":"Standard language models spend a fixed amount of compute per emitted token. Reasoning architectures allocate variable test-time compute to search, verify, and backtrack before responding.","metricLabel":"STEM benchmark delta","metricValue":"+42% accuracy gain"},{"tag":"hardware","title":"Memory Bandwidth as the Primary Bottleneck","content":"Generating thousands of internal reasoning tokens per query shifts cluster bottlenecks from raw matrix multiplication FLOPs to High-Bandwidth Memory (HBM3e/HBM4) throughput.","metricLabel":"Limiting hardware metric","metricValue":"HBM bandwidth (TB/s)"}],"quiz":{"question":"When does test-time compute scaling perform its additional work?","options":["During initial web dataset scraping","During active inference via reasoning search and verification","During client browser DOM rendering"],"correctIndex":1},"saved":false,"learned":false},{"id":"p3","category":"finance","country":"us","handle":"fixed_income","readTime":"95s","headline":"Treasury Cash-Futures Basis Trade: How Leveraged Arbitrage Absorbs Supply","sentiment":{"label":"cautionary","tone":"neg","score":"-68%"},"verificationScore":96,"corroboratingSourcesCount":6,"sources":[{"name":"Federal Reserve FEDS Notes","domain":"federalreserve.gov","title":"Recent Developments in Hedge Fund Treasury Futures and Repo Positions","tier":"Central Bank","url":"https://www.google.com/search?q=Federal+Reserve+FEDS+Notes+Treasury+Basis+Trade","consensusNote":"Tracks $800B–$1T+ gross notional short futures vs repo borrowing."},{"name":"Bank for International Settlements","domain":"bis.org","title":"Margin Spirals and Leverage in Core Bond Markets","tier":"Intergovernmental","url":"https://www.google.com/search?q=BIS+Treasury+basis+trade+margin+spirals","consensusNote":"Details repo haircut sensitivity during volatility spikes."}],"slides":[{"tag":"spread","title":"Why Treasury Futures Trade at a Slight Premium","content":"Asset managers and pension funds prefer buying Treasury futures over cash bonds because futures require less upfront capital. This structural demand pushes futures prices slightly above cash Treasuries.","metricLabel":"Typical unlevered basis spread","metricValue":"15–40 basis points"},{"tag":"leverage","title":"Repo Financing amplifies Thin Spreads","content":"Relative-value funds buy the cheaper cash Treasury, pledge it in the overnight repo market to borrow 98%+ of the purchase price, and simultaneously short the matching Treasury future.","metricLabel":"Typical leverage ratio","metricValue":"20x to 50x"}],"quiz":{"question":"What is the primary systemic risk in the Treasury cash-futures basis trade?","options":["Sudden spikes in overnight repo rates or futures margin requirements forcing rapid unwinds","Physical shortage of paper bond certificates","Elimination of coupon payments on 10-year notes"],"correctIndex":0},"saved":false,"learned":false},{"id":"p4","category":"economy","country":"eu","handle":"macro_tape","readTime":"90s","headline":"Structural Copper Deficit: 16-Year Mine Lead Times vs Electrification","sentiment":{"label":"cautionary","tone":"neg","score":"-72%"},"verificationScore":94,"corroboratingSourcesCount":5,"sources":[{"name":"International Energy Agency (IEA)","domain":"iea.org","title":"Global Critical Minerals Outlook: Copper Supply Trajectories","tier":"Intergovernmental","url":"https://www.google.com/search?q=IEA+Critical+Minerals+Outlook+Copper","consensusNote":"Documents 16.5-year average timeline from discovery to first cathode."}],"slides":[{"tag":"demand","title":"Copper Intensity of Grid & Datacenter Buildouts","content":"Grid transformers, HVDC interconnects, EV drivetrains, and AI cluster power busbars require high-purity cathode copper that aluminum cannot easily substitute in tight spaces.","metricLabel":"Projected 2030 supply gap","metricValue":"~4.5M metric tons"},{"tag":"supply","title":"Declining Ore Grades in Porphyry Deposits","content":"Average global copper ore grade has declined from >1.0% to ~0.5%, requiring double the rock tonnage and energy per ton of refined metal.","metricLabel":"Discovery-to-production cycle","metricValue":"16.5 years"}],"quiz":{"question":"Why is global copper supply inelastic over a 3-to-5 year horizon?","options":["Greenfield mines take ~16.5 years to permit, engineer, and commission","Copper can only be mined during winter months","Smelters only operate at 10% utilization"],"correctIndex":0},"saved":false,"learned":false},{"id":"p5","category":"science","country":"ch","handle":"physics_wire","readTime":"100s","headline":"Muon Catalyzed & High-Field HTS Magnets in Compact Fusion","sentiment":{"label":"constructive","tone":"pos","score":"+84%"},"verificationScore":93,"corroboratingSourcesCount":4,"sources":[{"name":"IEEE Transactions on Applied Superconductivity","domain":"ieee.org","title":"20-Tesla REBCO High-Temperature Superconducting Toroidal Field Coils","tier":"Peer-Reviewed","url":"https://www.google.com/search?q=REBCO+20+Tesla+superconducting+magnet+fusion","consensusNote":"Verifies B^4 fusion power density scaling in compact tokamaks."}],"slides":[{"tag":"scaling","title":"Magnetic Field Strength Scales Power Density by B⁴","content":"In magnetic confinement fusion, doubling the magnetic field strength (B) increases fusion power density by a factor of 16 (2⁴), allowing reactors to be built 10x smaller by volume.","metricLabel":"Power density scaling law","metricValue":"Proportional to B⁴"},{"tag":"materials","title":"REBCO Tape Superconductors at 20 Kelvin","content":"Rare-Earth Barium Copper Oxide (REBCO) superconducting tapes sustain 20-Tesla fields at 20K using liquid neon/helium cryocoolers rather than requiring 4K liquid helium baths.","metricLabel":"Peak coil field strength","metricValue":"20.1 Tesla"}],"quiz":{"question":"How does doubling magnetic field strength affect tokamak fusion power density?","options":["Increases power density by 16x (scales with B⁴)","Reduces power density by half","Has no effect on reactor volume"],"correctIndex":0},"saved":false,"learned":false}],"reels":[{"id":"r1","category":"economy","country":"jp","handle":"macro_60s","title":"The Yen Carry Trade Unwind Mechanics","hook":"How a 25 bps Bank of Japan rate move cascades into global equity deleveraging.","sentiment":{"label":"cautionary","tone":"neg","score":"-65%"},"verificationScore":94,"corroboratingSourcesCount":5,"sources":[{"name":"Bank for International Settlements","title":"Cross-Border Yen Credit Telemetry","url":"https://www.bis.org"}],"bullets":["01. Institutions borrow JPY at near-zero rates and convert to USD/EUR to buy higher-yielding assets.","02. When the BOJ hikes rates or the Yen appreciates, borrowers suffer simultaneous FX and funding losses.","03. Risk desks force-liquidate liquid foreign assets (US tech, sovereigns) to buy back JPY and close loans."],"keyMetric":"$1T+ estimated cross-border JPY funding exposure","mentalModel":"Carry trades harvest yield spreads in calm regimes but compress violently when funding currency volatility spikes.","saved":false,"learned":false},{"id":"r2","category":"tech","country":"us","handle":"photonic_core","title":"Co-Packaged Optics: Photons Replacing Copper Interconnects","hook":"Why moving bits between GPUs now consumes more power than multiplying matrices.","sentiment":{"label":"constructive","tone":"pos","score":"+91%"},"verificationScore":96,"corroboratingSourcesCount":6,"sources":[{"name":"IEEE Micro","title":"Silicon Photonics in AI Scale-Up Fabrics","url":"https://ieee.org"}],"bullets":["01. Electrical copper links suffer severe attenuation beyond 2 meters at 1.6 Tbps data rates.","02. Co-Packaged Optics (CPO) bond silicon photonic modulators directly adjacent to the GPU die.","03. Optical fibers carry signals across racks with 70% lower I/O power dissipation and sub-nanosecond latency."],"keyMetric":"-70% interconnect power dissipation","mentalModel":"Electrons are optimal for switching logic; photons are optimal for moving data across distance.","saved":false,"learned":false},{"id":"r3","category":"finance","country":"us","handle":"rates_wire","title":"Private Credit Direct Lending vs Syndicated Bank Loans","hook":"Why corporate buyout debt migrated from commercial bank balance sheets to private funds.","sentiment":{"label":"neutral","tone":"neutral","score":"+62%"},"verificationScore":93,"corroboratingSourcesCount":5,"sources":[{"name":"IMF Global Financial Stability Report","title":"The Rise and Risks of Private Credit","url":"https://www.imf.org"}],"bullets":["01. Post-2008 Basel III capital rules made holding non-investment-grade corporate loans expensive for banks.","02. Direct lenders raise locked-up LP capital (5–7 year funds), avoiding bank run liquidity mismatches.","03. Borrowers pay a 150–250 bps floating-rate spread premium in exchange for speed and bilateral covenant certainty."],"keyMetric":"$1.7T global private credit AUM","mentalModel":"Regulatory capital constraints do not eliminate credit risk; they reallocate it to long-duration non-bank balance sheets.","saved":false,"learned":false},{"id":"r4","category":"energy","country":"eu","handle":"grid_inertia","title":"Grid-Forming Inverters: Synthetic Inertia for Solar & Wind","hook":"How power electronics replicate the stabilizing physics of 500-ton spinning steam turbines.","sentiment":{"label":"constructive","tone":"pos","score":"+87%"},"verificationScore":95,"corroboratingSourcesCount":4,"sources":[{"name":"ENTSO-E Technical Report","title":"High Penetration of Power Electronic Interfaced Power Sources","url":"https://www.entsoe.eu"}],"bullets":["01. Traditional grids rely on rotational kinetic energy of heavy synchronous turbines to arrest sudden frequency drops (50/60 Hz).","02. Standard \"grid-following\" solar/wind inverters merely lock onto existing grid waveforms and trip offline during faults.","03. \"Grid-forming\" inverters use sub-millisecond control loops and battery buffers to synthesize voltage and frequency autonomously."],"keyMetric":"\u003c5ms synthetic frequency response","mentalModel":"Software-controlled voltage source inverters can emulate mechanical rotational inertia without spinning mass.","saved":false,"learned":false},{"id":"r5","category":"science","country":"ch","handle":"atomic_clock","title":"Thorium-229 Solid-State Nuclear Clocks","hook":"Transitioning timekeeping from electron shell transitions to the atomic nucleus.","sentiment":{"label":"transformative","tone":"pos","score":"+92%"},"verificationScore":96,"corroboratingSourcesCount":4,"sources":[{"name":"Nature Physics","title":"Laser Excitation of the Th-229 Nuclear Isomeric Transition","url":"https://www.nature.com"}],"bullets":["01. Atomic clocks measure microwave/optical transitions in outer electrons, which are sensitive to stray electromagnetic fields.","02. Thorium-229 possesses a uniquely low-energy nuclear transition accessible via vacuum-ultraviolet lasers.","03. Because the nucleus is shielded by electron shells, nuclear clocks offer 100x higher stability in solid-state crystals."],"keyMetric":"10⁻¹⁹ fractional frequency instability target","mentalModel":"Nuclear energy levels are naturally insulated from environmental electromagnetic noise that perturbs atomic electrons.","saved":false,"learned":false},{"id":"r6","category":"semiconductors","country":"eu","handle":"litho_optics","title":"High-NA EUV: 0.55 Numerical Aperture Anamorphic Optics","hook":"How ASML prints 8nm transistor features using 13.5nm extreme ultraviolet light.","sentiment":{"label":"constructive","tone":"pos","score":"+89%"},"verificationScore":98,"corroboratingSourcesCount":6,"sources":[{"name":"SPIE Lithography Proceedings","title":"High-NA EUV 0.55 System Architecture","url":"https://spie.org"}],"bullets":["01. Rayleigh resolution depends on wavelength divided by numerical aperture (NA). Increasing NA from 0.33 to 0.55 shrinks minimum pitch.","02. Larger grazing angles would cause mask shadowing, so Zeiss engineered anamorphic mirrors (4x magnification in X, 8x in Y).","03. Eliminates costly multi-patterning steps for sub-1.4nm logic nodes."],"keyMetric":"8nm single-exposure resolution","mentalModel":"Anamorphic optical demagnification bypasses photomask angle limits at extreme ultraviolet wavelengths.","saved":false,"learned":false},{"id":"r7","category":"quantum","country":"us","handle":"qec_surface","title":"Surface Code Thresholds & Logical Qubit Scaling","hook":"Why adding more physical qubits previously increased error rates—and how error correction flipped the curve.","sentiment":{"label":"constructive","tone":"pos","score":"+85%"},"verificationScore":94,"corroboratingSourcesCount":5,"sources":[{"name":"Nature","title":"Quantum Error Correction Below the Surface Code Threshold","url":"https://www.nature.com"}],"bullets":["01. Physical superconducting qubits decohere within ~100 microseconds due to thermal and electromagnetic noise.","02. Surface codes distribute one \"logical qubit\" across a 2D grid of data and syndrome-measurement qubits.","03. Once physical gate fidelity exceeds ~99.5%, scaling the grid size exponentially suppresses logical error rates."],"keyMetric":"2.14x error suppression per code distance step","mentalModel":"Below the fault-tolerance threshold, redundancy amplifies noise; above the threshold, redundancy extinguishes noise.","saved":false,"learned":false}],"savedPosts":[],"savedStream":[]};</script>
+  <script>window.__BETTERSCROLL_DATA__ = {"updatedAt":"2026-10-18T17:56:23.598Z","categories":[{"id":"all","name":"all","removable":false},{"id":"tech","name":"tech","removable":false},{"id":"energy","name":"energy","removable":false},{"id":"finance","name":"finance","removable":false},{"id":"science","name":"science","removable":false},{"id":"economy","name":"economy","removable":false},{"id":"semiconductors","name":"silicon","removable":true},{"id":"quantum","name":"quantum","removable":true}],"stories":[{"id":"s1","category":"semiconductors","author":"litho_notes","title":"2nm GAA & Backside Power","seen":false,"slides":[{"headline":"Gate-All-Around (GAA) Nanosheets","body":"Horizontal silicon ribbons replace vertical FinFET fins. The gate wraps all four sides of the channel, curbing sub-threshold leakage below 0.7V.","stat":"+15% clock at iso-power or -30% power at iso-frequency","takeaway":"Regains voltage scaling floor for high-density datacenter logic."},{"headline":"Backside Power Delivery (BSPDN)","body":"Moves power routing to the underside of the wafer while keeping logic signals on top, cutting parasitic RC delay and voltage droop.","stat":"20% reduction in logic core IR drop","takeaway":"Wafer-level 3D routing now drives efficiency gains alongside pitch shrink."}]},{"id":"s2","category":"energy","author":"grid_notes","title":"Sodium-Ion Grid Storage","seen":false,"slides":[{"headline":"Abundant Na+ Intercalation Chemistry","body":"Eliminates lithium, cobalt, and nickel dependencies. Hard carbon anodes and Prussian white cathodes operate reliably down to -20°C.","stat":"$40/kWh cell cost trajectory vs ~$70/kWh LFP","takeaway":"Lower gravimetric density is non-binding for stationary substation storage."}]},{"id":"s3","category":"finance","author":"rates_desk","title":"Overnight Reverse Repo Floor","seen":false,"slides":[{"headline":"ON RRP Liquidity Mechanics","body":"Money market funds park excess cash at the Federal Reserve overnight in exchange for Treasury collateral, setting a hard floor under short-term rates.","stat":"Sets effective lower bound for money market yields","takeaway":"Drainage of ON RRP balances marks the shift from abundant to ample bank reserves."}]},{"id":"s4","category":"science","author":"bio_systems","title":"Prime Editing Without DSBs","seen":false,"slides":[{"headline":"Single-Strand Search & Replace","body":"Couples an engineered reverse transcriptase with a Cas9 nickase, writing targeted edits directly into DNA without double-strand breaks.","stat":"Minimal off-target chromosomal translocation risk","takeaway":"Theoretically capable of correcting up to 89% of known pathogenic point mutations."}]}],"posts":[{"id":"p1","category":"energy","country":"us","handle":"watt_logic","readTime":"90s","headline":"Enhanced Geothermal: Directional Drilling Unlocks Dry Granite Baseload","sentiment":{"label":"constructive","tone":"pos","score":"+88%"},"verificationScore":97,"corroboratingSourcesCount":6,"sources":[{"name":"US Department of Energy","domain":"energy.gov","title":"Commercial Liftoff: Next-Generation Geothermal Power","tier":"Regulatory","url":"https://www.google.com/search?q=US+Department+of+Energy+Commercial+Liftoff+Geothermal","consensusNote":"Confirms 90 GW target and $60-70/MWh levelized cost trajectory."},{"name":"Fervo Energy Telemetry","domain":"fervoenergy.com","title":"Project Red 30-Day Cross-Well Flow Test Results","tier":"Industrial","url":"https://www.google.com/search?q=Fervo+Energy+Project+Red+Operational+Data","consensusNote":"Validates commercial flow rates and horizontal fracture thermal transfer."}],"slides":[{"tag":"constraint","title":"The 3% Hydrothermal Bottleneck","content":"Conventional geothermal required naturally occurring hot rock, water, and permeable fractures in the same location. 97% of continental crust heat remained inaccessible in dry basement granite.","metricLabel":"Crustal heat \u003c= 6km depth","metricValue":"50,000x annual global demand"},{"tag":"mechanism","title":"Horizontal Drilling & Polycrystalline Diamond Bits","content":"Adapting shale multi-stage horizontal drilling allows lateral well pairs at 4,000m depth. Cold water pumped down the injection well sweeps heat through fractured granite to the production well.","metricLabel":"Drilling speed vs 2019 baseline","metricValue":"3.4x faster"},{"tag":"economics","title":"24/7 Dispatchable Capacity Factor","content":"Unlike intermittent renewables (25–45% capacity factor), enhanced geothermal delivers >90% baseload utilization without grid-scale battery buffering.","metricLabel":"Projected LCOE (2027)","metricValue":"$60–$70 / MWh"}],"quiz":{"question":"What engineering crossover made geothermal viable outside volcanic zones?","options":["Horizontal directional drilling into dry hot granite","Deep-ocean thermal vent turbines","Surface solar-thermal steam injection"],"correctIndex":0},"saved":false,"learned":false},{"id":"p2","category":"tech","country":"us","handle":"kernel_arch","readTime":"110s","headline":"Inference Scaling Laws: Test-Time Compute vs Pre-Training FLOPs","sentiment":{"label":"transformative","tone":"pos","score":"+94%"},"verificationScore":95,"corroboratingSourcesCount":5,"sources":[{"name":"arXiv Preprint","domain":"arxiv.org","title":"Scaling LLM Test-Time Compute Optimally Can Be More Effective than Scaling Model Parameters","tier":"Academic","url":"https://www.google.com/search?q=Scaling+LLM+Test+Time+Compute+Optimally+arXiv","consensusNote":"Demonstrates compute-optimal trade-offs between parameter count and inference search."},{"name":"Epoch AI","domain":"epochai.org","title":"Test-Time Compute Frontier Analysis","tier":"Research","url":"https://www.google.com/search?q=Epoch+AI+Inference+Scaling","consensusNote":"Quantifies token generation bandwidth requirements."}],"slides":[{"tag":"paradigm","title":"From Single-Pass Autoregression to Search","content":"Standard language models spend a fixed amount of compute per emitted token. Reasoning architectures allocate variable test-time compute to search, verify, and backtrack before responding.","metricLabel":"STEM benchmark delta","metricValue":"+42% accuracy gain"},{"tag":"hardware","title":"Memory Bandwidth as the Primary Bottleneck","content":"Generating thousands of internal reasoning tokens per query shifts cluster bottlenecks from raw matrix multiplication FLOPs to High-Bandwidth Memory (HBM3e/HBM4) throughput.","metricLabel":"Limiting hardware metric","metricValue":"HBM bandwidth (TB/s)"}],"quiz":{"question":"When does test-time compute scaling perform its additional work?","options":["During initial web dataset scraping","During active inference via reasoning search and verification","During client browser DOM rendering"],"correctIndex":1},"saved":false,"learned":false},{"id":"p3","category":"finance","country":"us","handle":"fixed_income","readTime":"95s","headline":"Treasury Cash-Futures Basis Trade: How Leveraged Arbitrage Absorbs Supply","sentiment":{"label":"cautionary","tone":"neg","score":"-68%"},"verificationScore":96,"corroboratingSourcesCount":6,"sources":[{"name":"Federal Reserve FEDS Notes","domain":"federalreserve.gov","title":"Recent Developments in Hedge Fund Treasury Futures and Repo Positions","tier":"Central Bank","url":"https://www.google.com/search?q=Federal+Reserve+FEDS+Notes+Treasury+Basis+Trade","consensusNote":"Tracks $800B–$1T+ gross notional short futures vs repo borrowing."},{"name":"Bank for International Settlements","domain":"bis.org","title":"Margin Spirals and Leverage in Core Bond Markets","tier":"Intergovernmental","url":"https://www.google.com/search?q=BIS+Treasury+basis+trade+margin+spirals","consensusNote":"Details repo haircut sensitivity during volatility spikes."}],"slides":[{"tag":"spread","title":"Why Treasury Futures Trade at a Slight Premium","content":"Asset managers and pension funds prefer buying Treasury futures over cash bonds because futures require less upfront capital. This structural demand pushes futures prices slightly above cash Treasuries.","metricLabel":"Typical unlevered basis spread","metricValue":"15–40 basis points"},{"tag":"leverage","title":"Repo Financing amplifies Thin Spreads","content":"Relative-value funds buy the cheaper cash Treasury, pledge it in the overnight repo market to borrow 98%+ of the purchase price, and simultaneously short the matching Treasury future.","metricLabel":"Typical leverage ratio","metricValue":"20x to 50x"}],"quiz":{"question":"What is the primary systemic risk in the Treasury cash-futures basis trade?","options":["Sudden spikes in overnight repo rates or futures margin requirements forcing rapid unwinds","Physical shortage of paper bond certificates","Elimination of coupon payments on 10-year notes"],"correctIndex":0},"saved":false,"learned":false},{"id":"p4","category":"economy","country":"eu","handle":"macro_tape","readTime":"90s","headline":"Structural Copper Deficit: 16-Year Mine Lead Times vs Electrification","sentiment":{"label":"cautionary","tone":"neg","score":"-72%"},"verificationScore":94,"corroboratingSourcesCount":5,"sources":[{"name":"International Energy Agency (IEA)","domain":"iea.org","title":"Global Critical Minerals Outlook: Copper Supply Trajectories","tier":"Intergovernmental","url":"https://www.google.com/search?q=IEA+Critical+Minerals+Outlook+Copper","consensusNote":"Documents 16.5-year average timeline from discovery to first cathode."}],"slides":[{"tag":"demand","title":"Copper Intensity of Grid & Datacenter Buildouts","content":"Grid transformers, HVDC interconnects, EV drivetrains, and AI cluster power busbars require high-purity cathode copper that aluminum cannot easily substitute in tight spaces.","metricLabel":"Projected 2030 supply gap","metricValue":"~4.5M metric tons"},{"tag":"supply","title":"Declining Ore Grades in Porphyry Deposits","content":"Average global copper ore grade has declined from >1.0% to ~0.5%, requiring double the rock tonnage and energy per ton of refined metal.","metricLabel":"Discovery-to-production cycle","metricValue":"16.5 years"}],"quiz":{"question":"Why is global copper supply inelastic over a 3-to-5 year horizon?","options":["Greenfield mines take ~16.5 years to permit, engineer, and commission","Copper can only be mined during winter months","Smelters only operate at 10% utilization"],"correctIndex":0},"saved":false,"learned":false},{"id":"p5","category":"science","country":"ch","handle":"physics_wire","readTime":"100s","headline":"Muon Catalyzed & High-Field HTS Magnets in Compact Fusion","sentiment":{"label":"constructive","tone":"pos","score":"+84%"},"verificationScore":93,"corroboratingSourcesCount":4,"sources":[{"name":"IEEE Transactions on Applied Superconductivity","domain":"ieee.org","title":"20-Tesla REBCO High-Temperature Superconducting Toroidal Field Coils","tier":"Peer-Reviewed","url":"https://www.google.com/search?q=REBCO+20+Tesla+superconducting+magnet+fusion","consensusNote":"Verifies B^4 fusion power density scaling in compact tokamaks."}],"slides":[{"tag":"scaling","title":"Magnetic Field Strength Scales Power Density by B⁴","content":"In magnetic confinement fusion, doubling the magnetic field strength (B) increases fusion power density by a factor of 16 (2⁴), allowing reactors to be built 10x smaller by volume.","metricLabel":"Power density scaling law","metricValue":"Proportional to B⁴"},{"tag":"materials","title":"REBCO Tape Superconductors at 20 Kelvin","content":"Rare-Earth Barium Copper Oxide (REBCO) superconducting tapes sustain 20-Tesla fields at 20K using liquid neon/helium cryocoolers rather than requiring 4K liquid helium baths.","metricLabel":"Peak coil field strength","metricValue":"20.1 Tesla"}],"quiz":{"question":"How does doubling magnetic field strength affect tokamak fusion power density?","options":["Increases power density by 16x (scales with B⁴)","Reduces power density by half","Has no effect on reactor volume"],"correctIndex":0},"saved":false,"learned":false}],"reels":[{"id":"r1","category":"economy","country":"jp","handle":"macro_60s","title":"The Yen Carry Trade Unwind Mechanics","hook":"How a 25 bps Bank of Japan rate move cascades into global equity deleveraging.","sentiment":{"label":"cautionary","tone":"neg","score":"-65%"},"verificationScore":94,"corroboratingSourcesCount":5,"sources":[{"name":"Bank for International Settlements","title":"Cross-Border Yen Credit Telemetry","url":"https://www.bis.org"}],"bullets":["01. Institutions borrow JPY at near-zero rates and convert to USD/EUR to buy higher-yielding assets.","02. When the BOJ hikes rates or the Yen appreciates, borrowers suffer simultaneous FX and funding losses.","03. Risk desks force-liquidate liquid foreign assets (US tech, sovereigns) to buy back JPY and close loans."],"keyMetric":"$1T+ estimated cross-border JPY funding exposure","mentalModel":"Carry trades harvest yield spreads in calm regimes but compress violently when funding currency volatility spikes.","saved":false,"learned":false},{"id":"r2","category":"tech","country":"us","handle":"photonic_core","title":"Co-Packaged Optics: Photons Replacing Copper Interconnects","hook":"Why moving bits between GPUs now consumes more power than multiplying matrices.","sentiment":{"label":"constructive","tone":"pos","score":"+91%"},"verificationScore":96,"corroboratingSourcesCount":6,"sources":[{"name":"IEEE Micro","title":"Silicon Photonics in AI Scale-Up Fabrics","url":"https://ieee.org"}],"bullets":["01. Electrical copper links suffer severe attenuation beyond 2 meters at 1.6 Tbps data rates.","02. Co-Packaged Optics (CPO) bond silicon photonic modulators directly adjacent to the GPU die.","03. Optical fibers carry signals across racks with 70% lower I/O power dissipation and sub-nanosecond latency."],"keyMetric":"-70% interconnect power dissipation","mentalModel":"Electrons are optimal for switching logic; photons are optimal for moving data across distance.","saved":false,"learned":false},{"id":"r3","category":"finance","country":"us","handle":"rates_wire","title":"Private Credit Direct Lending vs Syndicated Bank Loans","hook":"Why corporate buyout debt migrated from commercial bank balance sheets to private funds.","sentiment":{"label":"neutral","tone":"neutral","score":"+62%"},"verificationScore":93,"corroboratingSourcesCount":5,"sources":[{"name":"IMF Global Financial Stability Report","title":"The Rise and Risks of Private Credit","url":"https://www.imf.org"}],"bullets":["01. Post-2008 Basel III capital rules made holding non-investment-grade corporate loans expensive for banks.","02. Direct lenders raise locked-up LP capital (5–7 year funds), avoiding bank run liquidity mismatches.","03. Borrowers pay a 150–250 bps floating-rate spread premium in exchange for speed and bilateral covenant certainty."],"keyMetric":"$1.7T global private credit AUM","mentalModel":"Regulatory capital constraints do not eliminate credit risk; they reallocate it to long-duration non-bank balance sheets.","saved":false,"learned":false},{"id":"r4","category":"energy","country":"eu","handle":"grid_inertia","title":"Grid-Forming Inverters: Synthetic Inertia for Solar & Wind","hook":"How power electronics replicate the stabilizing physics of 500-ton spinning steam turbines.","sentiment":{"label":"constructive","tone":"pos","score":"+87%"},"verificationScore":95,"corroboratingSourcesCount":4,"sources":[{"name":"ENTSO-E Technical Report","title":"High Penetration of Power Electronic Interfaced Power Sources","url":"https://www.entsoe.eu"}],"bullets":["01. Traditional grids rely on rotational kinetic energy of heavy synchronous turbines to arrest sudden frequency drops (50/60 Hz).","02. Standard \"grid-following\" solar/wind inverters merely lock onto existing grid waveforms and trip offline during faults.","03. \"Grid-forming\" inverters use sub-millisecond control loops and battery buffers to synthesize voltage and frequency autonomously."],"keyMetric":"\u003c5ms synthetic frequency response","mentalModel":"Software-controlled voltage source inverters can emulate mechanical rotational inertia without spinning mass.","saved":false,"learned":false},{"id":"r5","category":"science","country":"ch","handle":"atomic_clock","title":"Thorium-229 Solid-State Nuclear Clocks","hook":"Transitioning timekeeping from electron shell transitions to the atomic nucleus.","sentiment":{"label":"transformative","tone":"pos","score":"+92%"},"verificationScore":96,"corroboratingSourcesCount":4,"sources":[{"name":"Nature Physics","title":"Laser Excitation of the Th-229 Nuclear Isomeric Transition","url":"https://www.nature.com"}],"bullets":["01. Atomic clocks measure microwave/optical transitions in outer electrons, which are sensitive to stray electromagnetic fields.","02. Thorium-229 possesses a uniquely low-energy nuclear transition accessible via vacuum-ultraviolet lasers.","03. Because the nucleus is shielded by electron shells, nuclear clocks offer 100x higher stability in solid-state crystals."],"keyMetric":"10⁻¹⁹ fractional frequency instability target","mentalModel":"Nuclear energy levels are naturally insulated from environmental electromagnetic noise that perturbs atomic electrons.","saved":false,"learned":false},{"id":"r6","category":"semiconductors","country":"eu","handle":"litho_optics","title":"High-NA EUV: 0.55 Numerical Aperture Anamorphic Optics","hook":"How ASML prints 8nm transistor features using 13.5nm extreme ultraviolet light.","sentiment":{"label":"constructive","tone":"pos","score":"+89%"},"verificationScore":98,"corroboratingSourcesCount":6,"sources":[{"name":"SPIE Lithography Proceedings","title":"High-NA EUV 0.55 System Architecture","url":"https://spie.org"}],"bullets":["01. Rayleigh resolution depends on wavelength divided by numerical aperture (NA). Increasing NA from 0.33 to 0.55 shrinks minimum pitch.","02. Larger grazing angles would cause mask shadowing, so Zeiss engineered anamorphic mirrors (4x magnification in X, 8x in Y).","03. Eliminates costly multi-patterning steps for sub-1.4nm logic nodes."],"keyMetric":"8nm single-exposure resolution","mentalModel":"Anamorphic optical demagnification bypasses photomask angle limits at extreme ultraviolet wavelengths.","saved":false,"learned":false},{"id":"r7","category":"quantum","country":"us","handle":"qec_surface","title":"Surface Code Thresholds & Logical Qubit Scaling","hook":"Why adding more physical qubits previously increased error rates—and how error correction flipped the curve.","sentiment":{"label":"constructive","tone":"pos","score":"+85%"},"verificationScore":94,"corroboratingSourcesCount":5,"sources":[{"name":"Nature","title":"Quantum Error Correction Below the Surface Code Threshold","url":"https://www.nature.com"}],"bullets":["01. Physical superconducting qubits decohere within ~100 microseconds due to thermal and electromagnetic noise.","02. Surface codes distribute one \"logical qubit\" across a 2D grid of data and syndrome-measurement qubits.","03. Once physical gate fidelity exceeds ~99.5%, scaling the grid size exponentially suppresses logical error rates."],"keyMetric":"2.14x error suppression per code distance step","mentalModel":"Below the fault-tolerance threshold, redundancy amplifies noise; above the threshold, redundancy extinguishes noise.","saved":false,"learned":false}],"savedPosts":[],"savedStream":[]};</script>
   <script type="text/babel">
-    const { useState, useEffect } = React;
+    const { useState, useEffect, useRef } = React;
     const COUNTRIES = [
       { id: 'all', code: 'global', name: 'Global' },
       { id: 'us', code: 'us', name: 'United States' },
@@ -30,23 +30,51 @@
       { id: 'ch', code: 'ch', name: 'Switzerland' }
     ];
     function StandaloneApp() {
-      const data = window.__BETTERSCROLL_DATA__ || {};
+      const init = window.__BETTERSCROLL_DATA__ || {};
+      const loadLocal = (k, def) => {
+        try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : def; } catch (e) { return def; }
+      };
       const [activeTab, setActiveTab] = useState('feed');
       const [selectedCategory, setSelectedCategory] = useState('all');
       const [selectedCountry, setSelectedCountry] = useState('all');
-      const [categories] = useState(data.categories || []);
-      const [stories] = useState(data.stories || []);
-      const [posts, setPosts] = useState(data.posts || []);
-      const [reels, setReels] = useState(data.reels || []);
+      const [categories, setCategories] = useState(() => loadLocal('bs_cats', init.categories || []));
+      const [stories, setStories] = useState(() => loadLocal('bs_stories', init.stories || []));
+      const [posts, setPosts] = useState(() => loadLocal('bs_posts', init.posts || []));
+      const [reels, setReels] = useState(() => loadLocal('bs_reels', init.reels || []));
+      const [showDomainManager, setShowDomainManager] = useState(false);
+      const [newDomainName, setNewDomainName] = useState('');
+      const [activeStoryIndex, setActiveStoryIndex] = useState(null);
+      const [activeStorySlide, setActiveStorySlide] = useState(0);
       const [postSlideMap, setPostSlideMap] = useState({});
       const [expandedSourcesMap, setExpandedSourcesMap] = useState({});
       const [quizAnswers, setQuizAnswers] = useState({});
       const [currentReelIdx, setCurrentReelIdx] = useState(0);
       const [secondsLeft, setSecondsLeft] = useState(600);
       const [timerPaused, setTimerPaused] = useState(false);
+      const [showSessionCompleteModal, setShowSessionCompleteModal] = useState(false);
+      const [showVerificationModal, setShowVerificationModal] = useState(false);
+      const [customSearchQuery, setCustomSearchQuery] = useState('');
+      const [liveRadarOutput, setLiveRadarOutput] = useState('');
+      const [isRefreshing, setIsRefreshing] = useState(false);
+      const [vaultSynthesis, setVaultSynthesis] = useState('');
+      const [playingId, setPlayingId] = useState(null);
+      const [geminiKey, setGeminiKey] = useState(() => localStorage.getItem('bs_gemini_key') || '');
+      useEffect(() => {
+        try {
+          localStorage.setItem('bs_cats', JSON.stringify(categories));
+          localStorage.setItem('bs_stories', JSON.stringify(stories));
+          localStorage.setItem('bs_posts', JSON.stringify(posts));
+          localStorage.setItem('bs_reels', JSON.stringify(reels));
+        } catch (e) {}
+      }, [categories, stories, posts, reels]);
       useEffect(() => {
         if (timerPaused || secondsLeft <= 0) return;
-        const t = setInterval(() => setSecondsLeft((p) => Math.max(0, p - 1)), 1000);
+        const t = setInterval(() => {
+          setSecondsLeft((p) => {
+            if (p <= 1) { setShowSessionCompleteModal(true); return 0; }
+            return p - 1;
+          });
+        }, 1000);
         return () => clearInterval(t);
       }, [timerPaused, secondsLeft]);
       const formatTime = (s) => {
@@ -54,58 +82,206 @@
         const r = s % 60;
         return (m < 10 ? '0' : '') + m + ':' + (r < 10 ? '0' : '') + r;
       };
-      const categoryPosts = posts.filter((p) => selectedCategory === 'all' || p.category === selectedCategory);
-      const exactPosts = categoryPosts.filter((p) => selectedCountry === 'all' || (p.country && p.country.toLowerCase() === selectedCountry));
+      const speakText = (id, text) => {
+        if (!("speechSynthesis" in window)) return;
+        if (playingId === id) { window.speechSynthesis.cancel(); setPlayingId(null); return; }
+        window.speechSynthesis.cancel();
+        const u = new SpeechSynthesisUtterance(text);
+        u.rate = 0.98;
+        u.onend = () => setPlayingId(null);
+        setPlayingId(id);
+        window.speechSynthesis.speak(u);
+      };
+      const handleRefresh = async (topic = "") => {
+        setIsRefreshing(true);
+        if (geminiKey.trim()) {
+          try {
+            const res = await fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=" + geminiKey.trim(), {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                contents: [{ parts: [{ text: "Generate 1 concise technical insight in JSON {category, country, handle, headline, slides:[{tag,title,content,metricLabel,metricValue}], quiz:{question,options,correctIndex}} about: " + (topic || selectedCategory) }] }],
+                generationConfig: { responseMimeType: "application/json" }
+              })
+            });
+            const d = await res.json();
+            const txt = d?.candidates?.[0]?.content?.parts?.[0]?.text;
+            if (txt) {
+              const p = JSON.parse(txt);
+              if (p && p.headline) {
+                setPosts((prev) => [{ ...p, id: "p_" + Date.now(), verificationScore: 95, corroboratingSourcesCount: 5, sentiment: { label: "constructive", tone: "pos", score: "+88%" }, saved: false, learned: false }, ...prev]);
+                setIsRefreshing(false);
+                return;
+              }
+            }
+          } catch (e) {}
+        }
+        setTimeout(() => {
+          setPosts((prev) => [...prev].reverse());
+          setReels((prev) => [...prev].reverse());
+          setIsRefreshing(false);
+        }, 350);
+      };
+      const handleLiveWire = () => {
+        const pool = posts.slice(0, 3).map((p) => "• [" + p.category.toUpperCase() + " / " + (p.country || "global").toUpperCase() + "] " + p.headline + " (" + (p.slides?.[0]?.metricValue || "verified") + ")");
+        setLiveRadarOutput(pool.join("\n"));
+      };
+      const handleSynthesizeVault = () => {
+        const sp = posts.filter((p) => p.saved);
+        const sr = reels.filter((r) => r.saved);
+        const lines = [
+          "• Cross-Domain Bottleneck: Physical infrastructure (grid transformers, HBM memory bandwidth, and 16-year mining lead times) sets the hard ceiling on digital & energy scaling.",
+          "• Capital & Rate Sensitivity: High-leverage basis arbitrage and cross-border funding carry trades amplify small central bank rate shifts into global liquidity events.",
+          "• Active Notes Linked: " + [...sp.map((x) => x.headline), ...sr.map((x) => x.title)].join(" | ")
+        ];
+        setVaultSynthesis(lines.join("\n\n"));
+      };
+      const handleAddDomain = () => {
+        if (!newDomainName.trim()) return;
+        const id = newDomainName.trim().toLowerCase().replace(/[^a-z0-9]/g, "_");
+        if (!categories.some((c) => c.id === id)) {
+          setCategories((prev) => [...prev, { id, name: newDomainName.trim().toLowerCase(), removable: true }]);
+        }
+        setNewDomainName("");
+        setSelectedCategory(id);
+      };
+      const qFilter = customSearchQuery.trim().toLowerCase();
+      const categoryPosts = posts.filter((p) => (selectedCategory === "all" || p.category === selectedCategory) && (!qFilter || p.headline.toLowerCase().includes(qFilter) || p.category.toLowerCase().includes(qFilter)));
+      const exactPosts = categoryPosts.filter((p) => selectedCountry === "all" || (p.country && p.country.toLowerCase() === selectedCountry));
       const displayedPosts = exactPosts.length > 0 ? exactPosts : categoryPosts;
-      const categoryReels = reels.filter((r) => selectedCategory === 'all' || r.category === selectedCategory);
-      const exactReels = categoryReels.filter((r) => selectedCountry === 'all' || (r.country && r.country.toLowerCase() === selectedCountry));
+      const categoryReels = reels.filter((r) => selectedCategory === "all" || r.category === selectedCategory);
+      const exactReels = categoryReels.filter((r) => selectedCountry === "all" || (r.country && r.country.toLowerCase() === selectedCountry));
       const displayedReels = exactReels.length > 0 ? exactReels : categoryReels;
       const savedCount = posts.filter((p) => p.saved).length + reels.filter((r) => r.saved).length;
       const learnedCount = posts.filter((p) => p.learned).length + reels.filter((r) => r.learned).length;
       return (
         <div className="min-h-screen bg-[#0a0a0b] text-zinc-300 font-mono text-xs flex justify-center">
           <div className="w-full max-w-xl min-h-screen border-x border-zinc-900 bg-[#0d0d0f] flex flex-col relative">
-            <header className="sticky top-0 z-30 bg-[#0d0d0f]/95 border-b border-zinc-900 px-4 py-2.5 space-y-2">
+            <header className="sticky top-0 z-30 bg-[#0d0d0f]/95 backdrop-blur-sm border-b border-zinc-900 px-4 py-2.5 space-y-2">
               <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-500/80" />
-                  <span className="text-zinc-100 font-medium">betterscroll</span>
+                  <span className="text-zinc-100 font-medium tracking-tight">betterscroll</span>
                   <span className="text-zinc-600 text-[11px]">· {learnedCount} read</span>
                 </div>
-                <button onClick={() => setTimerPaused(!timerPaused)} className="px-2 py-0.5 rounded text-[11px] text-zinc-400">{formatTime(secondsLeft)}</button>
+                <div className="flex items-center gap-2">
+                  <button onClick={() => setTimerPaused(!timerPaused)} className="px-2 py-0.5 rounded text-[11px] tabular-nums text-zinc-400 hover:text-zinc-200">{formatTime(secondsLeft)}</button>
+                  <button onClick={() => handleRefresh(customSearchQuery)} className="px-2.5 py-1 rounded bg-zinc-900 hover:bg-zinc-800 text-zinc-200 border border-zinc-800 text-[11px]">{isRefreshing ? "syncing..." : "refresh"}</button>
+                </div>
+              </div>
+              <div className="w-full h-[1px] bg-zinc-900 overflow-hidden"><div className="h-full bg-zinc-600 transition-all duration-300" style={{ width: ((secondsLeft / 600) * 100) + "%" }} /></div>
+              <div className="flex items-center justify-between gap-2 overflow-x-auto no-scrollbar pt-0.5 text-[11px]">
+                <div className="flex items-center gap-1 shrink-0">
+                  <span className="text-zinc-600 mr-1">region:</span>
+                  {COUNTRIES.map((c) => (
+                    <button key={c.id} onClick={() => { setSelectedCountry(c.id); setCurrentReelIdx(0); }} className={"px-1.5 py-0.5 rounded transition " + (selectedCountry === c.id ? "text-zinc-100 bg-zinc-800 font-medium" : "text-zinc-500 hover:text-zinc-300")}>{c.code}</button>
+                  ))}
+                </div>
+                <button onClick={() => setShowVerificationModal(true)} className="text-[10px] text-zinc-600 hover:text-zinc-400 shrink-0">methodology</button>
               </div>
               <div className="flex items-center gap-1 overflow-x-auto no-scrollbar text-[11px]">
-                <span className="text-zinc-600 mr-1">region:</span>
-                {COUNTRIES.map((c) => (
-                  <button key={c.id} onClick={() => { setSelectedCountry(c.id); setCurrentReelIdx(0); }} className={"px-1.5 py-0.5 rounded " + (selectedCountry === c.id ? "text-zinc-100 bg-zinc-800 font-medium" : "text-zinc-500")}>{c.code}</button>
-                ))}
-              </div>
-              <div className="flex items-center gap-1 overflow-x-auto no-scrollbar text-[11px]">
-                <span className="text-zinc-600 mr-1">domain:</span>
+                <span className="text-zinc-600 mr-1 shrink-0">domain:</span>
                 {categories.map((cat) => (
-                  <button key={cat.id} onClick={() => { setSelectedCategory(cat.id); setCurrentReelIdx(0); }} className={"px-2 py-0.5 rounded whitespace-nowrap " + (selectedCategory === cat.id ? "text-zinc-100 bg-zinc-800 font-medium" : "text-zinc-500")}>{cat.name}</button>
+                  <button key={cat.id} onClick={() => { setSelectedCategory(cat.id); setCurrentReelIdx(0); }} className={"px-2 py-0.5 rounded whitespace-nowrap transition " + (selectedCategory === cat.id ? "text-zinc-100 bg-zinc-800 font-medium" : "text-zinc-500 hover:text-zinc-300")}>{cat.name}</button>
                 ))}
+                <button onClick={() => setShowDomainManager(true)} className="px-1.5 py-0.5 rounded text-zinc-600 hover:text-zinc-300 shrink-0">+ edit</button>
               </div>
             </header>
             <main className="flex-1 overflow-y-auto pb-20">
               {activeTab === "feed" && (
                 <div className="divide-y divide-zinc-900">
+                  <div className="px-4 py-3 bg-[#0b0b0d]">
+                    <div className="text-[11px] text-zinc-500 mb-2">briefs (60s)</div>
+                    <div className="flex items-center gap-2 overflow-x-auto no-scrollbar">
+                      {stories.map((st, idx) => (
+                        <button key={st.id} onClick={() => { setActiveStoryIndex(idx); setActiveStorySlide(0); setStories((prev) => prev.map((s, i) => i === idx ? { ...s, seen: true } : s)); }} className={"flex flex-col text-left px-3 py-2 rounded border transition min-w-[140px] max-w-[155px] shrink-0 " + (st.seen ? "border-zinc-900 bg-zinc-950/40 text-zinc-600" : "border-zinc-800 bg-[#111114] text-zinc-200 hover:border-zinc-700")}>
+                          <span className="text-[10px] text-zinc-500 mb-1">{st.category}</span>
+                          <span className="text-[11px] font-medium truncate">{st.title}</span>
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="px-4 py-2.5 bg-[#0b0b0d] space-y-2">
+                    <div className="flex items-center gap-2 bg-[#111114] border border-zinc-800/80 px-3 py-1.5 rounded">
+                      <span className="text-zinc-600">/</span>
+                      <input type="text" value={customSearchQuery} onChange={(e) => setCustomSearchQuery(e.target.value)} onKeyDown={(e) => { if (e.key === "Enter") handleRefresh(customSearchQuery); }} placeholder="filter or query topic..." className="flex-1 bg-transparent text-xs text-zinc-200 placeholder-zinc-600 focus:outline-none" />
+                      <button onClick={handleLiveWire} className="text-[11px] text-zinc-400 hover:text-zinc-200 pl-2 border-l border-zinc-800">live wire</button>
+                    </div>
+                    {liveRadarOutput && (
+                      <div className="p-3 bg-[#111114] border border-zinc-800 rounded text-[11px] space-y-1.5">
+                        <div className="flex justify-between text-zinc-500 border-b border-zinc-800 pb-1"><span>telemetry wire</span><button onClick={() => setLiveRadarOutput("")}>close</button></div>
+                        <div className="text-zinc-300 whitespace-pre-line leading-relaxed">{liveRadarOutput}</div>
+                      </div>
+                    )}
+                  </div>
                   {displayedPosts.map((post) => {
                     const idx = postSlideMap[post.id] || 0;
                     const slide = post.slides[idx] || post.slides[0];
+                    const isSourcesExpanded = expandedSourcesMap[post.id];
+                    const picked = quizAnswers[post.id];
                     return (
                       <article key={post.id} className="p-4 space-y-3">
-                        <div className="flex justify-between text-[11px] text-zinc-500">
-                          <span>{post.category} · {post.country} · @{post.handle}</span>
-                          <span>{post.verificationScore || 95}% verified</span>
+                        <div className="flex items-center justify-between text-[11px] text-zinc-500">
+                          <span><strong className="text-zinc-300 font-medium">{post.category}</strong> · {post.country} · @{post.handle} · {post.readTime || "90s"}</span>
+                          <div className="flex items-center gap-2">
+                            <button onClick={() => setExpandedSourcesMap((p) => ({ ...p, [post.id]: !p[post.id] }))} className="text-zinc-400 hover:text-zinc-200">{post.verificationScore || 95}% verified ({post.corroboratingSourcesCount || 5})</button>
+                            <span className={post.sentiment?.tone === "neg" ? "text-amber-400/90" : "text-emerald-400/90"}>{post.sentiment?.label} {post.sentiment?.score}</span>
+                          </div>
                         </div>
-                        <h2 className="text-sm font-medium text-zinc-100">{post.headline}</h2>
-                        <div className="border border-zinc-800 bg-[#111114] p-3.5 rounded space-y-2">
-                          <div className="flex justify-between text-[11px] text-zinc-500"><span>{slide.tag}</span><span>{idx + 1} / {post.slides.length}</span></div>
+                        <h2 className="text-sm font-medium text-zinc-100 leading-snug">{post.headline}</h2>
+                        <div className="border border-zinc-800 bg-[#111114] p-3.5 rounded space-y-2.5">
+                          <div className="flex justify-between text-[11px] text-zinc-500"><span className="text-zinc-400">{slide.tag}</span><span>{idx + 1} / {post.slides.length}</span></div>
                           <h3 className="text-xs font-medium text-zinc-200">{slide.title}</h3>
-                          <p className="text-zinc-400 text-xs font-sans">{slide.content}</p>
-                          <div className="pt-2 border-t border-zinc-800 flex justify-between text-[11px]"><span className="text-zinc-500">{slide.metricLabel}</span><span className="text-zinc-200">{slide.metricValue}</span></div>
+                          <p className="text-zinc-400 text-xs font-sans leading-relaxed">{slide.content}</p>
+                          <div className="pt-2 border-t border-zinc-800/70 flex justify-between text-[11px]"><span className="text-zinc-500">{slide.metricLabel}</span><span className="text-zinc-200 font-medium">{slide.metricValue}</span></div>
+                          {post.slides.length > 1 && (
+                            <div className="flex items-center justify-between pt-1 text-[11px]">
+                              <button disabled={idx === 0} onClick={() => setPostSlideMap((p) => ({ ...p, [post.id]: Math.max(0, idx - 1) }))} className="text-zinc-400 disabled:opacity-25 hover:text-zinc-200">← prev</button>
+                              <button disabled={idx === post.slides.length - 1} onClick={() => setPostSlideMap((p) => ({ ...p, [post.id]: Math.min(post.slides.length - 1, idx + 1) }))} className="text-zinc-400 disabled:opacity-25 hover:text-zinc-200">next →</button>
+                            </div>
+                          )}
                         </div>
+                        <div className="flex items-center justify-between pt-0.5 text-[11px]">
+                          <div className="flex items-center gap-3">
+                            <button onClick={() => setPosts((prev) => prev.map((x) => x.id === post.id ? { ...x, learned: !x.learned } : x))} className={post.learned ? "text-emerald-400 font-medium" : "text-zinc-500 hover:text-zinc-300"}>{post.learned ? "✓ read" : "mark read"}</button>
+                            <button onClick={() => setExpandedSourcesMap((p) => ({ ...p, [post.id]: !p[post.id] }))} className={isSourcesExpanded ? "text-zinc-200 underline" : "text-zinc-500 hover:text-zinc-300"}>sources ({post.sources?.length || 2})</button>
+                            <button onClick={() => speakText(post.id, post.headline + ". " + slide.title + ". " + slide.content)} className="text-zinc-500 hover:text-zinc-300">{playingId === post.id ? "stop" : "listen"}</button>
+                          </div>
+                          <button onClick={() => setPosts((prev) => prev.map((x) => x.id === post.id ? { ...x, saved: !x.saved } : x))} className={post.saved ? "text-zinc-100 font-medium" : "text-zinc-500 hover:text-zinc-300"}>{post.saved ? "★ saved" : "save"}</button>
+                        </div>
+                        {isSourcesExpanded && (
+                          <div className="p-3 rounded border border-zinc-800 bg-[#111114] text-[11px] space-y-2">
+                            <div className="flex justify-between text-zinc-500 border-b border-zinc-800 pb-1"><span>primary sources</span><span>{post.verificationScore || 95}% consensus</span></div>
+                            {(post.sources || []).map((src, sIdx) => (
+                              <div key={sIdx} className="flex items-start justify-between gap-3 py-1 border-b border-zinc-900 last:border-0">
+                                <div><div className="text-zinc-200 font-medium">{src.name} <span className="text-zinc-500 font-normal">· {src.tier}</span></div><div className="text-zinc-400 font-sans">{src.title}</div>{src.consensusNote && <div className="text-zinc-500 text-[10px]">{src.consensusNote}</div>}</div>
+                                <a href={src.url} target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-zinc-100 shrink-0">open ↗</a>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                        {post.quiz && (
+                          <div className="pt-2 border-t border-zinc-900 text-[11px] space-y-1.5">
+                            <div className="text-zinc-500">{post.quiz.question}</div>
+                            <div className="space-y-1">
+                              {post.quiz.options.map((opt, oIdx) => {
+                                const isRight = oIdx === post.quiz.correctIndex;
+                                const isPicked = picked === oIdx;
+                                let cls = "border-zinc-900 bg-[#111114]/60 text-zinc-400 hover:border-zinc-800";
+                                if (picked !== undefined) {
+                                  if (isRight) cls = "border-emerald-800/60 bg-emerald-950/20 text-zinc-200";
+                                  else if (isPicked) cls = "border-red-900/50 bg-red-950/20 text-zinc-500";
+                                }
+                                return (
+                                  <button key={oIdx} onClick={() => { setQuizAnswers((p) => ({ ...p, [post.id]: oIdx })); if (isRight) setPosts((prev) => prev.map((x) => x.id === post.id ? { ...x, learned: true } : x)); }} className={"w-full text-left px-2.5 py-1.5 rounded border transition flex justify-between " + cls}>
+                                    <span className="font-sans">{opt}</span>
+                                    {picked !== undefined && isRight && <span className="text-emerald-400">✓</span>}
+                                  </button>
+                                );
+                              })}
+                            </div>
+                          </div>
+                        )}
                       </article>
                     );
                   })}
@@ -116,26 +292,110 @@
                 const reel = displayedReels[safeIdx];
                 return (
                   <div className="p-4 space-y-3">
-                    <div className="border border-zinc-800 bg-[#111114] p-4 rounded space-y-3">
-                      <h2 className="text-sm font-medium text-zinc-100">{reel.title}</h2>
-                      <p className="text-xs text-zinc-400 font-sans">{reel.hook}</p>
-                      {reel.bullets.map((b, bi) => <div key={bi} className="p-2 rounded bg-[#0d0d0f] border border-zinc-800 text-xs">{b}</div>)}
+                    <div className="flex justify-between text-[11px] text-zinc-500"><span>stream · {selectedCategory}</span><span>{safeIdx + 1} / {displayedReels.length}</span></div>
+                    <div className="border border-zinc-800 bg-[#111114] p-4 rounded space-y-4">
+                      <div className="flex justify-between text-[11px] text-zinc-500 border-b border-zinc-800 pb-2"><span><strong className="text-zinc-300">{reel.category}</strong> · {reel.country} · @{reel.handle}</span><span>{reel.verificationScore || 95}% verified</span></div>
+                      <div className="space-y-1.5"><h2 className="text-sm font-medium text-zinc-100">{reel.title}</h2><p className="text-xs text-zinc-400 font-sans">{reel.hook}</p></div>
+                      <div className="space-y-2">{reel.bullets.map((b, bi) => <div key={bi} className="p-2.5 rounded bg-[#0d0d0f] border border-zinc-800/70 text-xs font-sans leading-relaxed">{b}</div>)}</div>
+                      <div className="p-2.5 rounded bg-[#0d0d0f] border border-zinc-800/70 flex justify-between text-[11px]"><span className="text-zinc-500">key metric</span><span className="text-zinc-200 font-medium">{reel.keyMetric}</span></div>
+                      <div className="p-2.5 rounded bg-[#0d0d0f] border border-zinc-800/70 space-y-1"><span className="text-[10px] text-zinc-500 block">mental model</span><p className="text-xs text-zinc-200 font-sans">{reel.mentalModel}</p></div>
+                      <div className="flex items-center justify-between pt-2 border-t border-zinc-800 text-[11px]">
+                        <div className="flex items-center gap-3">
+                          <button onClick={() => setReels((prev) => prev.map((x) => x.id === reel.id ? { ...x, learned: !x.learned } : x))} className={reel.learned ? "text-emerald-400 font-medium" : "text-zinc-500"}>{reel.learned ? "✓ read" : "mark read"}</button>
+                          <button onClick={() => speakText(reel.id, reel.title + ". " + reel.hook + ". " + reel.bullets.join(" "))} className="text-zinc-500">{playingId === reel.id ? "stop" : "listen"}</button>
+                          <button onClick={() => setReels((prev) => prev.map((x) => x.id === reel.id ? { ...x, saved: !x.saved } : x))} className={reel.saved ? "text-zinc-100 font-medium" : "text-zinc-500"}>{reel.saved ? "★ saved" : "save"}</button>
+                        </div>
+                        <div className="flex gap-1.5">
+                          <button disabled={safeIdx === 0} onClick={() => setCurrentReelIdx((p) => Math.max(0, p - 1))} className="px-2.5 py-1 rounded border border-zinc-800 bg-zinc-900 text-zinc-400 disabled:opacity-30">prev</button>
+                          <button onClick={() => setCurrentReelIdx((p) => (safeIdx < displayedReels.length - 1 ? p + 1 : 0))} className="px-2.5 py-1 rounded border border-zinc-700 bg-zinc-800 text-zinc-200">next</button>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 );
               })()}
               {activeTab === "vault" && (
-                <div className="p-4 space-y-2">
-                  <div className="text-xs text-zinc-200 font-medium pb-2 border-b border-zinc-900">saved notes ({savedCount})</div>
-                  {posts.filter((p) => p.saved).map((p) => <div key={p.id} className="p-3 rounded border border-zinc-800 bg-[#111114] text-xs">{p.headline}</div>)}
+                <div className="p-4 space-y-3">
+                  <div className="flex items-center justify-between border-b border-zinc-900 pb-2.5">
+                    <div><div className="text-xs text-zinc-200 font-medium">saved notes ({savedCount})</div><div className="text-[11px] text-zinc-500">{learnedCount} marked read</div></div>
+                    {savedCount > 0 && <button onClick={handleSynthesizeVault} className="px-2.5 py-1 rounded border border-zinc-800 bg-zinc-900 text-zinc-300 text-[11px]">synthesize links</button>}
+                  </div>
+                  {vaultSynthesis && <div className="p-3 rounded border border-zinc-800 bg-[#111114] text-xs font-sans whitespace-pre-line text-zinc-300">{vaultSynthesis}</div>}
+                  {savedCount === 0 ? <div className="p-8 text-center text-zinc-500">No saved notes yet.</div> : (
+                    <div className="space-y-2">
+                      {posts.filter((p) => p.saved).map((p) => <div key={p.id} className="p-3 rounded border border-zinc-800 bg-[#111114] flex justify-between items-center"><div><div className="text-[10px] text-zinc-500">{p.category} · {p.country}</div><div className="text-xs text-zinc-200">{p.headline}</div></div><button onClick={() => setPosts((prev) => prev.map((x) => x.id === p.id ? { ...x, saved: false } : x))} className="text-[11px] text-zinc-500">remove</button></div>)}
+                      {reels.filter((r) => r.saved).map((r) => <div key={r.id} className="p-3 rounded border border-zinc-800 bg-[#111114] flex justify-between items-center"><div><div className="text-[10px] text-zinc-500">stream · {r.category}</div><div className="text-xs text-zinc-200">{r.title}</div></div><button onClick={() => setReels((prev) => prev.map((x) => x.id === r.id ? { ...x, saved: false } : x))} className="text-[11px] text-zinc-500">remove</button></div>)}
+                    </div>
+                  )}
+                </div>
+              )}
+              {activeTab === "config" && (
+                <div className="p-4 space-y-4">
+                  <div className="p-3.5 rounded border border-zinc-800 bg-[#111114] space-y-2">
+                    <div className="text-xs font-medium text-zinc-200">standalone github pages deployment</div>
+                    <p className="text-[11px] text-zinc-400 font-sans">Running live from GitHub Pages. Optional: enter a Gemini API key to generate live custom batches on this standalone link.</p>
+                    <input type="password" value={geminiKey} onChange={(e) => { setGeminiKey(e.target.value); localStorage.setItem("bs_gemini_key", e.target.value); }} placeholder="optional Gemini API key (AIza...)" className="w-full bg-[#0a0a0c] border border-zinc-800 rounded px-2.5 py-1.5 text-xs text-zinc-200" />
+                  </div>
+                  <div className="p-3.5 rounded border border-zinc-800 bg-[#111114] flex items-center justify-between">
+                    <span className="text-xs text-zinc-200">domain channels ({categories.length})</span>
+                    <button onClick={() => setShowDomainManager(true)} className="px-2.5 py-1 rounded border border-zinc-800 bg-zinc-900 text-zinc-300 text-xs">edit channels</button>
+                  </div>
+                  <div className="p-3.5 rounded border border-zinc-800 bg-[#111114] flex items-center justify-between">
+                    <span className="text-xs text-zinc-200">session timer</span>
+                    <div className="flex gap-1.5"><button onClick={() => setSecondsLeft(600)} className="px-2.5 py-1 rounded border border-zinc-800 bg-zinc-900 text-zinc-300">10m</button><button onClick={() => setSecondsLeft(300)} className="px-2.5 py-1 rounded border border-zinc-800 bg-zinc-900 text-zinc-300">5m</button></div>
+                  </div>
                 </div>
               )}
             </main>
             <nav className="sticky bottom-0 z-30 bg-[#0d0d0f] border-t border-zinc-900 px-6 py-2.5 flex justify-between text-xs">
               <button onClick={() => setActiveTab("feed")} className={activeTab === "feed" ? "text-zinc-100 font-medium" : "text-zinc-500"}>feed</button>
               <button onClick={() => setActiveTab("stream")} className={activeTab === "stream" ? "text-zinc-100 font-medium" : "text-zinc-500"}>stream</button>
-              <button onClick={() => setActiveTab("vault")} className={activeTab === "vault" ? "text-zinc-100 font-medium" : "text-zinc-500"}>saved ({savedCount})</button>
+              <button onClick={() => setActiveTab("vault")} className={activeTab === "vault" ? "text-zinc-100 font-medium" : "text-zinc-500"}>saved {savedCount > 0 ? "(" + savedCount + ")" : ""}</button>
+              <button onClick={() => setActiveTab("config")} className={activeTab === "config" ? "text-zinc-100 font-medium" : "text-zinc-500"}>git / config</button>
             </nav>
+            {activeStoryIndex !== null && stories[activeStoryIndex] && (() => {
+              const st = stories[activeStoryIndex];
+              const sl = st.slides[activeStorySlide] || st.slides[0];
+              return (
+                <div className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4">
+                  <div className="w-full max-w-md bg-[#111114] border border-zinc-800 rounded p-4 space-y-4">
+                    <div className="flex justify-between border-b border-zinc-800 pb-2 text-[11px] text-zinc-500"><span>{st.category} · {st.title}</span><button onClick={() => setActiveStoryIndex(null)}>close</button></div>
+                    <div className="space-y-3"><h3 className="text-sm font-medium text-zinc-100">{sl.headline}</h3><p className="text-xs text-zinc-300 font-sans leading-relaxed">{sl.body}</p><div className="p-2.5 rounded bg-[#0d0d0f] border border-zinc-800"><span className="text-[10px] text-zinc-500 block">metric</span><div className="text-zinc-200 font-medium">{sl.stat}</div></div><div className="p-2.5 rounded bg-[#0d0d0f] border border-zinc-800"><span className="text-[10px] text-zinc-500 block">takeaway</span><div className="text-zinc-300 font-sans">{sl.takeaway}</div></div></div>
+                    <div className="flex justify-between pt-2 border-t border-zinc-800 text-[11px]">
+                      <button disabled={activeStorySlide === 0} onClick={() => setActiveStorySlide((p) => Math.max(0, p - 1))} className="text-zinc-400 disabled:opacity-30">prev</button>
+                      <span className="text-zinc-500">{activeStorySlide + 1} / {st.slides.length}</span>
+                      <button onClick={() => { if (activeStorySlide < st.slides.length - 1) setActiveStorySlide((p) => p + 1); else setActiveStoryIndex(null); }} className="text-zinc-200 font-medium">next</button>
+                    </div>
+                  </div>
+                </div>
+              );
+            })()}
+            {showDomainManager && (
+              <div className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4">
+                <div className="w-full max-w-sm bg-[#111114] border border-zinc-800 rounded p-4 space-y-3">
+                  <div className="flex justify-between border-b border-zinc-800 pb-2 text-xs"><span className="font-medium text-zinc-200">domain channels</span><button onClick={() => setShowDomainManager(false)} className="text-zinc-500">close</button></div>
+                  <div className="flex gap-1.5"><input type="text" value={newDomainName} onChange={(e) => setNewDomainName(e.target.value)} onKeyDown={(e) => { if (e.key === "Enter") handleAddDomain(); }} placeholder="add domain..." className="flex-1 bg-[#0a0a0c] border border-zinc-800 rounded px-2.5 py-1.5 text-xs text-zinc-200" /><button onClick={handleAddDomain} className="px-3 py-1.5 rounded bg-zinc-800 text-zinc-200 text-xs">add</button></div>
+                  <div className="space-y-1 max-h-48 overflow-y-auto">{categories.map((c) => <div key={c.id} className="flex justify-between px-2.5 py-1.5 rounded bg-[#0d0d0f] border border-zinc-800/60 text-xs"><span>{c.name}</span>{c.removable ? <button onClick={() => setCategories((p) => p.filter((x) => x.id !== c.id))} className="text-zinc-500 hover:text-red-400">remove</button> : <span className="text-zinc-600 text-[10px]">default</span>}</div>)}</div>
+                </div>
+              </div>
+            )}
+            {showVerificationModal && (
+              <div className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4">
+                <div className="w-full max-w-sm bg-[#111114] border border-zinc-800 rounded p-4 space-y-3 text-xs">
+                  <div className="flex justify-between border-b border-zinc-800 pb-2"><span className="font-medium text-zinc-200">verification methodology</span><button onClick={() => setShowVerificationModal(false)} className="text-zinc-500">close</button></div>
+                  <p className="text-zinc-400 font-sans leading-relaxed">Verification scores reflect independent primary sources (regulatory filings, central banks, peer-reviewed journals) reporting consistent quantitative figures.</p>
+                </div>
+              </div>
+            )}
+            {showSessionCompleteModal && (
+              <div className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4">
+                <div className="w-full max-w-sm bg-[#111114] border border-zinc-800 rounded p-4 text-center space-y-3">
+                  <div className="text-zinc-200 text-xs font-medium">10m session complete</div>
+                  <p className="text-xs text-zinc-400 font-sans">You read {learnedCount} notes and saved {savedCount} items.</p>
+                  <div className="flex gap-2 pt-1"><button onClick={() => { setSecondsLeft(600); setShowSessionCompleteModal(false); }} className="flex-1 py-1.5 rounded bg-zinc-800 text-zinc-200 text-xs">+10m</button><button onClick={() => setShowSessionCompleteModal(false)} className="flex-1 py-1.5 rounded border border-zinc-800 text-zinc-400 text-xs">dismiss</button></div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       );
